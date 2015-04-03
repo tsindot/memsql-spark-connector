@@ -1,0 +1,1 @@
+SPARK_CLASSPATH=$HOME/Downloads/mysql-connector-java-5.1.35/mysql-connector-java-5.1.35-bin.jar ../../spark/bin/spark-submit --jars $HOME/Downloads/mysql-connector-java-5.1.35/mysql-connector-java-5.1.35-bin.jar --class MemSQLRelationUsageDemo --master local[4] target/scala-2.10/MemSQLRelation-assembly-0.1.2.jar
