@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>rdd - com.memsql.spark.connector.rdd</title>
+          <meta name="description" content="rdd - com.memsql.spark.connector.rdd" />
+          <meta name="keywords" content="rdd com.memsql.spark.connector.rdd" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../../../index.html';
+            var hash = 'com.memsql.spark.connector.rdd.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img src="../../../../../lib/package_big.png" />
+        <p id="owner"><a href="../../../../package.html" class="extype" name="com">com</a>.<a href="../../../package.html" class="extype" name="com.memsql">memsql</a>.<a href="../../package.html" class="extype" name="com.memsql.spark">spark</a>.<a href="../package.html" class="extype" name="com.memsql.spark.connector">connector</a></p>
+        <h1>rdd</h1>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">rdd</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        
+        
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="com.memsql.spark.connector.rdd.MemSQLRDD" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MemSQLRDD[T]extendsRDD[T]withLoggingwithProductwithSerializable"></a>
+      <a id="MemSQLRDD[T]:MemSQLRDD[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="MemSQLRDD.html"><span class="name">MemSQLRDD</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="sc">sc: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.SparkContext" class="extype" target="_top">SparkContext</a></span>, <span name="dbHost">dbHost: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="dbPort">dbPort: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a></span>, <span name="user">user: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="password">password: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="dbName">dbName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="sql">sql: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="mapRow">mapRow: (<span class="extype" name="java.sql.ResultSet">ResultSet</span>) ⇒ <span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span> = <span class="defval" name="{<br/>&amp;nbsp;&amp;nbsp;  ((rs: java.sql.ResultSet) =&gt; MemSQLRDD.resultSetToObjectArray(rs))<br/>&amp;nbsp;&amp;nbsp;}">...</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="evidence$1">evidence$1: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>)</span><span class="result"> extends <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>] with <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.Logging" class="extype" target="_top">Logging</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">An <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">org.apache.spark.rdd.RDD</a> that can read data from a MemSQL database based on a SQL query.</p>
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="com.memsql.spark.connector.rdd.MemSQLRDD" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MemSQLRDD"></a>
+      <a id="MemSQLRDD:MemSQLRDD"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="MemSQLRDD$.html"><span class="name">MemSQLRDD</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4>
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+      <script defer="defer" type="text/javascript" id="jquery-js" src="../../../../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../../../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../../../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../../../../lib/template.js"></script>
+    </body>
+      </html>

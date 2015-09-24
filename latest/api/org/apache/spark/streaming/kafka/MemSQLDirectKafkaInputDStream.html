@@ -1,0 +1,1307 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>MemSQLDirectKafkaInputDStream - org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream</title>
+          <meta name="description" content="MemSQLDirectKafkaInputDStream - org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream" />
+          <meta name="keywords" content="MemSQLDirectKafkaInputDStream org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../../../index.html';
+            var hash = 'org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="type">
+      <div id="definition">
+        <img src="../../../../../lib/class_big.png" />
+        <p id="owner"><a href="../../../../package.html" class="extype" name="org">org</a>.<a href="../../../package.html" class="extype" name="org.apache">apache</a>.<a href="../../package.html" class="extype" name="org.apache.spark">spark</a>.<a href="../package.html" class="extype" name="org.apache.spark.streaming">streaming</a>.<a href="package.html" class="extype" name="org.apache.spark.streaming.kafka">kafka</a></p>
+        <h1>MemSQLDirectKafkaInputDStream</h1>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">MemSQLDirectKafkaInputDStream</span><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>, <span name="U">U &lt;: <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/kafka/kafka_2.10/0.8.2.1/kafka_2.10-0.8.2.1-javadoc.jar/!/index.html#kafka.serializer.Decoder" class="extype" target="_top">Decoder</a>[<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.K">K</span>]</span>, <span name="T">T &lt;: <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/kafka/kafka_2.10/0.8.2.1/kafka_2.10-0.8.2.1-javadoc.jar/!/index.html#kafka.serializer.Decoder" class="extype" target="_top">Decoder</a>[<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.V">V</span>]</span>, <span name="R">R</span>]</span><span class="result"> extends <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/spark/spark-streaming-kafka_2.10/1.4.1/spark-streaming-kafka_2.10-1.4.1-javadoc.jar/!/index.html#org.apache.spark.streaming.kafka.DirectKafkaInputDStream" class="extype" target="_top">DirectKafkaInputDStream</a>[<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.K">K</span>, <span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.V">V</span>, <span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.U">U</span>, <span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.T">T</span>, <span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.R">R</span>]</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/spark/spark-streaming-kafka_2.10/1.4.1/spark-streaming-kafka_2.10-1.4.1-javadoc.jar/!/index.html#org.apache.spark.streaming.kafka.DirectKafkaInputDStream" class="extype" target="_top">DirectKafkaInputDStream</a>[<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.K">K</span>, <span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.V">V</span>, <span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.U">U</span>, <span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.T">T</span>, <span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.R">R</span>], <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.streaming.dstream.InputDStream" class="extype" target="_top">InputDStream</a>[<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.R">R</span>], <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.streaming.dstream.DStream" class="extype" target="_top">DStream</a>[<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.R">R</span>], <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.Logging" class="extype" target="_top">Logging</a>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a>, <span class="extype" name="java.io.Serializable">Serializable</span>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Any" class="extype" target="_top">Any</a></div>
+        </div></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol>
+                
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By inheritance</span></li>
+              </ol>
+            </div>
+        <div id="ancestors">
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream"><span>MemSQLDirectKafkaInputDStream</span></li><li class="in" name="org.apache.spark.streaming.kafka.DirectKafkaInputDStream"><span>DirectKafkaInputDStream</span></li><li class="in" name="org.apache.spark.streaming.dstream.InputDStream"><span>InputDStream</span></li><li class="in" name="org.apache.spark.streaming.dstream.DStream"><span>DStream</span></li><li class="in" name="org.apache.spark.Logging"><span>Logging</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show all</span></li>
+            </ol>
+            <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#members" target="_blank">Learn more about member selection</a>
+          </div>
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        <div id="constructors" class="members">
+              <h3>Instance Constructors</h3>
+              <ol><li name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(ssc_:org.apache.spark.streaming.StreamingContext,kafkaParams:Map[String,String],fromOffsets:Map[kafka.common.TopicAndPartition,Long],messageHandler:kafka.message.MessageAndMetadata[K,V]=&gt;R,batchDuration:Long)(implicitevidence$1:scala.reflect.ClassTag[K],implicitevidence$2:scala.reflect.ClassTag[V],implicitevidence$3:scala.reflect.ClassTag[U],implicitevidence$4:scala.reflect.ClassTag[T],implicitevidence$5:scala.reflect.ClassTag[R]):org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream[K,V,U,T,R]"></a>
+      <a id="&lt;init&gt;:MemSQLDirectKafkaInputDStream[K,V,U,T,R]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">MemSQLDirectKafkaInputDStream</span><span class="params">(<span name="ssc_">ssc_: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.streaming.StreamingContext" class="extype" target="_top">StreamingContext</a></span>, <span name="kafkaParams">kafkaParams: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="fromOffsets">fromOffsets: <span class="extype" name="scala.Predef.Map">Map</span>[<a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/kafka/kafka_2.10/0.8.2.1/kafka_2.10-0.8.2.1-javadoc.jar/!/index.html#kafka.common.TopicAndPartition" class="extype" target="_top">TopicAndPartition</a>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Long" class="extype" target="_top">Long</a>]</span>, <span name="messageHandler">messageHandler: (<a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/kafka/kafka_2.10/0.8.2.1/kafka_2.10-0.8.2.1-javadoc.jar/!/index.html#kafka.message.MessageAndMetadata" class="extype" target="_top">MessageAndMetadata</a>[<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.K">K</span>, <span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.V">V</span>]) ⇒ <span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.R">R</span></span>, <span name="batchDuration">batchDuration: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Long" class="extype" target="_top">Long</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.K">K</span>]</span>, <span name="arg1">arg1: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.V">V</span>]</span>, <span name="arg2">arg2: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.U">U</span>]</span>, <span name="arg3">arg3: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.T">T</span>]</span>, <span name="arg4">arg4: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.R">R</span>]</span>)</span>
+      </span>
+      </h4>
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="scala.AnyRef#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:AnyRef):Boolean"></a>
+      <a id="!=(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.Any#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a>
+      <a id="!=(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <a id="##():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:AnyRef):Boolean"></a>
+      <a id="==(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.Any#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a>
+      <a id="==(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <a id="asInstanceOf[T0]:T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="org.apache.spark.streaming.dstream.InputDStream#baseScope" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="baseScope:Option[String]"></a>
+      <a id="baseScope:Option[String]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">baseScope</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../package.html" class="extype" name="org.apache.spark.streaming">org.apache.spark.streaming</a>] </dd><dt>Definition Classes</dt><dd>InputDStream → DStream</dd></dl></div>
+    </li><li name="org.apache.spark.streaming.dstream.DStream#cache" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="cache():org.apache.spark.streaming.dstream.DStream[T]"></a>
+      <a id="cache():DStream[R]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">cache</span><span class="params">()</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.streaming.dstream.DStream" class="extype" target="_top">DStream</a>[<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.R">R</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DStream</dd></dl></div>
+    </li><li name="org.apache.spark.streaming.dstream.DStream#checkpoint" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="checkpoint(interval:&lt;?&gt;):org.apache.spark.streaming.dstream.DStream[T]"></a>
+      <a id="checkpoint(Duration):DStream[R]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">checkpoint</span><span class="params">(<span name="interval">interval: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.streaming.Duration" class="extype" target="_top">Duration</a></span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.streaming.dstream.DStream" class="extype" target="_top">DStream</a>[<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.R">R</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DStream</dd></dl></div>
+    </li><li name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream#checkpointData" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="checkpointData:Null"></a>
+      <a id="checkpointData:Null"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">checkpointData</span><span class="result">: <span class="extype" name="scala.Null">Null</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream">MemSQLDirectKafkaInputDStream</a> → DirectKafkaInputDStream → DStream</dd></dl></div>
+    </li><li name="org.apache.spark.streaming.kafka.DirectKafkaInputDStream#clamp" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clamp(leaderOffsets:Map[kafka.common.TopicAndPartition,org.apache.spark.streaming.kafka.KafkaCluster.LeaderOffset]):Map[kafka.common.TopicAndPartition,org.apache.spark.streaming.kafka.KafkaCluster.LeaderOffset]"></a>
+      <a id="clamp(Map[TopicAndPartition,LeaderOffset]):Map[TopicAndPartition,LeaderOffset]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clamp</span><span class="params">(<span name="leaderOffsets">leaderOffsets: <span class="extype" name="scala.Predef.Map">Map</span>[<a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/kafka/kafka_2.10/0.8.2.1/kafka_2.10-0.8.2.1-javadoc.jar/!/index.html#kafka.common.TopicAndPartition" class="extype" target="_top">TopicAndPartition</a>, <span class="extype" name="org.apache.spark.streaming.kafka.KafkaCluster.LeaderOffset">LeaderOffset</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Predef.Map">Map</span>[<a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/kafka/kafka_2.10/0.8.2.1/kafka_2.10-0.8.2.1-javadoc.jar/!/index.html#kafka.common.TopicAndPartition" class="extype" target="_top">TopicAndPartition</a>, <span class="extype" name="org.apache.spark.streaming.kafka.KafkaCluster.LeaderOffset">LeaderOffset</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>DirectKafkaInputDStream</dd></dl></div>
+    </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a>
+      <a id="clone():AnyRef"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream#compute" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="compute(validTime:org.apache.spark.streaming.Time):Option[org.apache.spark.streaming.kafka.KafkaRDD[K,V,U,T,R]]"></a>
+      <a id="compute(Time):Option[KafkaRDD[K,V,U,T,R]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">compute</span><span class="params">(<span name="validTime">validTime: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.streaming.Time" class="extype" target="_top">Time</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/spark/spark-streaming-kafka_2.10/1.4.1/spark-streaming-kafka_2.10-1.4.1-javadoc.jar/!/index.html#org.apache.spark.streaming.kafka.KafkaRDD" class="extype" target="_top">KafkaRDD</a>[<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.K">K</span>, <span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.V">V</span>, <span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.U">U</span>, <span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.T">T</span>, <span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.R">R</span>]]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream">MemSQLDirectKafkaInputDStream</a> → DirectKafkaInputDStream → DStream</dd></dl></div>
+    </li><li name="org.apache.spark.streaming.dstream.DStream#context" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="context:org.apache.spark.streaming.StreamingContext"></a>
+      <a id="context:StreamingContext"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">context</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.streaming.StreamingContext" class="extype" target="_top">StreamingContext</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DStream</dd></dl></div>
+    </li><li name="org.apache.spark.streaming.dstream.DStream#count" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="count():org.apache.spark.streaming.dstream.DStream[Long]"></a>
+      <a id="count():DStream[Long]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">count</span><span class="params">()</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.streaming.dstream.DStream" class="extype" target="_top">DStream</a>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Long" class="extype" target="_top">Long</a>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DStream</dd></dl></div>
+    </li><li name="org.apache.spark.streaming.dstream.DStream#countByValue" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="countByValue(numPartitions:&lt;?&gt;)(implicitord:&lt;?&gt;):org.apache.spark.streaming.dstream.DStream[(T,Long)]"></a>
+      <a id="countByValue(Int)(Ordering[R]):DStream[(R,Long)]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">countByValue</span><span class="params">(<span name="numPartitions">numPartitions: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ord">ord: <span class="extype" name="scala.Ordering">Ordering</span>[<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.R">R</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.streaming.dstream.DStream" class="extype" target="_top">DStream</a>[(<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.R">R</span>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Long" class="extype" target="_top">Long</a>)]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DStream</dd></dl></div>
+    </li><li name="org.apache.spark.streaming.dstream.DStream#countByValueAndWindow" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="countByValueAndWindow(windowDuration:&lt;?&gt;,slideDuration:&lt;?&gt;,numPartitions:&lt;?&gt;)(implicitord:&lt;?&gt;):org.apache.spark.streaming.dstream.DStream[(T,Long)]"></a>
+      <a id="countByValueAndWindow(Duration,Duration,Int)(Ordering[R]):DStream[(R,Long)]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">countByValueAndWindow</span><span class="params">(<span name="windowDuration">windowDuration: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.streaming.Duration" class="extype" target="_top">Duration</a></span>, <span name="slideDuration">slideDuration: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.streaming.Duration" class="extype" target="_top">Duration</a></span>, <span name="numPartitions">numPartitions: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ord">ord: <span class="extype" name="scala.Ordering">Ordering</span>[<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.R">R</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.streaming.dstream.DStream" class="extype" target="_top">DStream</a>[(<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.R">R</span>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Long" class="extype" target="_top">Long</a>)]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DStream</dd></dl></div>
+    </li><li name="org.apache.spark.streaming.dstream.DStream#countByWindow" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="countByWindow(windowDuration:&lt;?&gt;,slideDuration:&lt;?&gt;):org.apache.spark.streaming.dstream.DStream[Long]"></a>
+      <a id="countByWindow(Duration,Duration):DStream[Long]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">countByWindow</span><span class="params">(<span name="windowDuration">windowDuration: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.streaming.Duration" class="extype" target="_top">Duration</a></span>, <span name="slideDuration">slideDuration: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.streaming.Duration" class="extype" target="_top">Duration</a></span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.streaming.dstream.DStream" class="extype" target="_top">DStream</a>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Long" class="extype" target="_top">Long</a>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DStream</dd></dl></div>
+    </li><li name="org.apache.spark.streaming.dstream.DStream#createRDDWithLocalProperties" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="createRDDWithLocalProperties[U&lt;:&lt;?&gt;](time:&lt;?&gt;)(body:&lt;?&gt;):U"></a>
+      <a id="createRDDWithLocalProperties[U](Time)(⇒U):U"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">createRDDWithLocalProperties</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="time">time: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.streaming.Time" class="extype" target="_top">Time</a></span>)</span><span class="params">(<span name="body">body: ⇒ <span class="extype" name="org.apache.spark.streaming.dstream.DStream.createRDDWithLocalProperties.U">U</span></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.streaming.dstream.DStream.createRDDWithLocalProperties.U">U</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>DStream</dd></dl></div>
+    </li><li name="org.apache.spark.streaming.kafka.DirectKafkaInputDStream#currentOffsets" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="currentOffsets:Map[kafka.common.TopicAndPartition,Long]"></a>
+      <a id="currentOffsets:Map[TopicAndPartition,Long]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">currentOffsets</span><span class="result">: <span class="extype" name="scala.Predef.Map">Map</span>[<a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/kafka/kafka_2.10/0.8.2.1/kafka_2.10-0.8.2.1-javadoc.jar/!/index.html#kafka.common.TopicAndPartition" class="extype" target="_top">TopicAndPartition</a>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Long" class="extype" target="_top">Long</a>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>DirectKafkaInputDStream</dd></dl></div>
+    </li><li name="org.apache.spark.streaming.dstream.InputDStream#dependencies" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="dependencies:List[org.apache.spark.streaming.dstream.DStream[_]]"></a>
+      <a id="dependencies:List[DStream[_]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">dependencies</span><span class="result">: <span class="extype" name="scala.List">List</span>[<a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.streaming.dstream.DStream" class="extype" target="_top">DStream</a>[_]]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>InputDStream → DStream</dd></dl></div>
+    </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a>
+      <a id="eq(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#equals" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(x$1:Any):Boolean"></a>
+      <a id="equals(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="org.apache.spark.streaming.dstream.DStream#filter" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="filter(filterFunc:&lt;?&gt;):org.apache.spark.streaming.dstream.DStream[T]"></a>
+      <a id="filter((R)⇒Boolean):DStream[R]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">filter</span><span class="params">(<span name="filterFunc">filterFunc: (<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.R">R</span>) ⇒ <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.streaming.dstream.DStream" class="extype" target="_top">DStream</a>[<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.R">R</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DStream</dd></dl></div>
+    </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <a id="finalize():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.spark.streaming.dstream.DStream#flatMap" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="flatMap[U&lt;:&lt;?&gt;](flatMapFunc:&lt;?&gt;)(implicitevidence$3:&lt;?&gt;):org.apache.spark.streaming.dstream.DStream[U]"></a>
+      <a id="flatMap[U]((R)⇒Traversable[U])(ClassTag[U]):DStream[U]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">flatMap</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="flatMapFunc">flatMapFunc: (<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.R">R</span>) ⇒ <span class="extype" name="scala.Traversable">Traversable</span>[<span class="extype" name="org.apache.spark.streaming.dstream.DStream.flatMap.U">U</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.streaming.dstream.DStream.flatMap.U">U</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.streaming.dstream.DStream" class="extype" target="_top">DStream</a>[<span class="extype" name="org.apache.spark.streaming.dstream.DStream.flatMap.U">U</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DStream</dd></dl></div>
+    </li><li name="org.apache.spark.streaming.dstream.DStream#foreachRDD" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="foreachRDD(foreachFunc:&lt;?&gt;):Unit"></a>
+      <a id="foreachRDD((RDD[R],Time)⇒Unit):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">foreachRDD</span><span class="params">(<span name="foreachFunc">foreachFunc: (<a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.R">R</span>], <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.streaming.Time" class="extype" target="_top">Time</a>) ⇒ <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DStream</dd></dl></div>
+    </li><li name="org.apache.spark.streaming.dstream.DStream#foreachRDD" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="foreachRDD(foreachFunc:&lt;?&gt;):Unit"></a>
+      <a id="foreachRDD((RDD[R])⇒Unit):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">foreachRDD</span><span class="params">(<span name="foreachFunc">foreachFunc: (<a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.R">R</span>]) ⇒ <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DStream</dd></dl></div>
+    </li><li name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream#fromOffsets" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="fromOffsets:Map[kafka.common.TopicAndPartition,Long]"></a>
+      <a id="fromOffsets:Map[TopicAndPartition,Long]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">fromOffsets</span><span class="result">: <span class="extype" name="scala.Predef.Map">Map</span>[<a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/kafka/kafka_2.10/0.8.2.1/kafka_2.10-0.8.2.1-javadoc.jar/!/index.html#kafka.common.TopicAndPartition" class="extype" target="_top">TopicAndPartition</a>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Long" class="extype" target="_top">Long</a>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream">MemSQLDirectKafkaInputDStream</a> → DirectKafkaInputDStream</dd></dl></div>
+    </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <a id="getClass():Class[_]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="org.apache.spark.streaming.dstream.DStream#glom" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="glom():org.apache.spark.streaming.dstream.DStream[Array[T]]"></a>
+      <a id="glom():DStream[Array[R]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">glom</span><span class="params">()</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.streaming.dstream.DStream" class="extype" target="_top">DStream</a>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Array" class="extype" target="_top">Array</a>[<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.R">R</span>]]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DStream</dd></dl></div>
+    </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
+      <a id="hashCode():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="org.apache.spark.streaming.dstream.InputDStream#id" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="id:Int"></a>
+      <a id="id:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">id</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>InputDStream</dd></dl></div>
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="org.apache.spark.Logging#isTraceEnabled" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isTraceEnabled():Boolean"></a>
+      <a id="isTraceEnabled():Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isTraceEnabled</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream#kafkaParams" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="kafkaParams:Map[String,String]"></a>
+      <a id="kafkaParams:Map[String,String]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">kafkaParams</span><span class="result">: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream">MemSQLDirectKafkaInputDStream</a> → DirectKafkaInputDStream</dd></dl></div>
+    </li><li name="org.apache.spark.streaming.kafka.DirectKafkaInputDStream#kc" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="kc:org.apache.spark.streaming.kafka.KafkaCluster"></a>
+      <a id="kc:KafkaCluster"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">kc</span><span class="result">: <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/spark/spark-streaming-kafka_2.10/1.4.1/spark-streaming-kafka_2.10-1.4.1-javadoc.jar/!/index.html#org.apache.spark.streaming.kafka.KafkaCluster" class="extype" target="_top">KafkaCluster</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>DirectKafkaInputDStream</dd></dl></div>
+    </li><li name="org.apache.spark.streaming.kafka.DirectKafkaInputDStream#latestLeaderOffsets" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="latestLeaderOffsets(retries:Int):Map[kafka.common.TopicAndPartition,org.apache.spark.streaming.kafka.KafkaCluster.LeaderOffset]"></a>
+      <a id="latestLeaderOffsets(Int):Map[TopicAndPartition,LeaderOffset]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">latestLeaderOffsets</span><span class="params">(<span name="retries">retries: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a></span>)</span><span class="result">: <span class="extype" name="scala.Predef.Map">Map</span>[<a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/kafka/kafka_2.10/0.8.2.1/kafka_2.10-0.8.2.1-javadoc.jar/!/index.html#kafka.common.TopicAndPartition" class="extype" target="_top">TopicAndPartition</a>, <span class="extype" name="org.apache.spark.streaming.kafka.KafkaCluster.LeaderOffset">LeaderOffset</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>DirectKafkaInputDStream</dd><dt>Annotations</dt><dd>
+                <span class="name">@tailrec</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.spark.Logging#log" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="log:org.slf4j.Logger"></a>
+      <a id="log:Logger"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">log</span><span class="result">: <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/slf4j/slf4j-api/1.7.10/slf4j-api-1.7.10-javadoc.jar/!/index.html#org.slf4j.Logger" class="extype" target="_top">Logger</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.Logging#logDebug" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logDebug(msg:&lt;?&gt;,throwable:&lt;?&gt;):Unit"></a>
+      <a id="logDebug(⇒String,Throwable):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logDebug</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="throwable">throwable: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.Logging#logDebug" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logDebug(msg:&lt;?&gt;):Unit"></a>
+      <a id="logDebug(⇒String):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logDebug</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.Logging#logError" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logError(msg:&lt;?&gt;,throwable:&lt;?&gt;):Unit"></a>
+      <a id="logError(⇒String,Throwable):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logError</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="throwable">throwable: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.Logging#logError" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logError(msg:&lt;?&gt;):Unit"></a>
+      <a id="logError(⇒String):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logError</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.Logging#logInfo" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logInfo(msg:=&gt;String,throwable:Throwable):Unit"></a>
+      <a id="logInfo(⇒String,Throwable):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logInfo</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="throwable">throwable: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.Logging#logInfo" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logInfo(msg:=&gt;String):Unit"></a>
+      <a id="logInfo(⇒String):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logInfo</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.Logging#logName" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logName:String"></a>
+      <a id="logName:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logName</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.Logging#logTrace" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logTrace(msg:&lt;?&gt;,throwable:&lt;?&gt;):Unit"></a>
+      <a id="logTrace(⇒String,Throwable):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logTrace</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="throwable">throwable: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.Logging#logTrace" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logTrace(msg:&lt;?&gt;):Unit"></a>
+      <a id="logTrace(⇒String):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logTrace</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.Logging#logWarning" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logWarning(msg:=&gt;String,throwable:Throwable):Unit"></a>
+      <a id="logWarning(⇒String,Throwable):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logWarning</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="throwable">throwable: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.Logging#logWarning" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logWarning(msg:=&gt;String):Unit"></a>
+      <a id="logWarning(⇒String):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logWarning</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.streaming.dstream.DStream#map" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="map[U&lt;:&lt;?&gt;](mapFunc:&lt;?&gt;)(implicitevidence$2:&lt;?&gt;):org.apache.spark.streaming.dstream.DStream[U]"></a>
+      <a id="map[U]((R)⇒U)(ClassTag[U]):DStream[U]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">map</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="mapFunc">mapFunc: (<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.R">R</span>) ⇒ <span class="extype" name="org.apache.spark.streaming.dstream.DStream.map.U">U</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.streaming.dstream.DStream.map.U">U</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.streaming.dstream.DStream" class="extype" target="_top">DStream</a>[<span class="extype" name="org.apache.spark.streaming.dstream.DStream.map.U">U</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DStream</dd></dl></div>
+    </li><li name="org.apache.spark.streaming.dstream.DStream#mapPartitions" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="mapPartitions[U&lt;:&lt;?&gt;](mapPartFunc:&lt;?&gt;,preservePartitioning:&lt;?&gt;)(implicitevidence$4:&lt;?&gt;):org.apache.spark.streaming.dstream.DStream[U]"></a>
+      <a id="mapPartitions[U]((Iterator[R])⇒Iterator[U],Boolean)(ClassTag[U]):DStream[U]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">mapPartitions</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="mapPartFunc">mapPartFunc: (<span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.R">R</span>]) ⇒ <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="org.apache.spark.streaming.dstream.DStream.mapPartitions.U">U</span>]</span>, <span name="preservePartitioning">preservePartitioning: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.streaming.dstream.DStream.mapPartitions.U">U</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.streaming.dstream.DStream" class="extype" target="_top">DStream</a>[<span class="extype" name="org.apache.spark.streaming.dstream.DStream.mapPartitions.U">U</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DStream</dd></dl></div>
+    </li><li name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream#maxMessagesPerPartition" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="maxMessagesPerPartition:Option[Long]"></a>
+      <a id="maxMessagesPerPartition:Option[Long]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">maxMessagesPerPartition</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Long" class="extype" target="_top">Long</a>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream">MemSQLDirectKafkaInputDStream</a> → DirectKafkaInputDStream</dd></dl></div>
+    </li><li name="org.apache.spark.streaming.kafka.DirectKafkaInputDStream#maxRetries" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="maxRetries:Int"></a>
+      <a id="maxRetries:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">maxRetries</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DirectKafkaInputDStream</dd></dl></div>
+    </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a>
+      <a id="ne(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
+      <a id="notify():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
+      <a id="notifyAll():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="org.apache.spark.streaming.dstream.DStream#persist" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="persist():org.apache.spark.streaming.dstream.DStream[T]"></a>
+      <a id="persist():DStream[R]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">persist</span><span class="params">()</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.streaming.dstream.DStream" class="extype" target="_top">DStream</a>[<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.R">R</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DStream</dd></dl></div>
+    </li><li name="org.apache.spark.streaming.dstream.DStream#persist" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="persist(level:&lt;?&gt;):org.apache.spark.streaming.dstream.DStream[T]"></a>
+      <a id="persist(StorageLevel):DStream[R]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">persist</span><span class="params">(<span name="level">level: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.storage.StorageLevel" class="extype" target="_top">StorageLevel</a></span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.streaming.dstream.DStream" class="extype" target="_top">DStream</a>[<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.R">R</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DStream</dd></dl></div>
+    </li><li name="org.apache.spark.streaming.dstream.DStream#print" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="print(num:&lt;?&gt;):Unit"></a>
+      <a id="print(Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">print</span><span class="params">(<span name="num">num: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DStream</dd></dl></div>
+    </li><li name="org.apache.spark.streaming.dstream.DStream#print" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="print():Unit"></a>
+      <a id="print():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">print</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DStream</dd></dl></div>
+    </li><li name="org.apache.spark.streaming.dstream.DStream#reduce" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="reduce(reduceFunc:&lt;?&gt;):org.apache.spark.streaming.dstream.DStream[T]"></a>
+      <a id="reduce((R,R)⇒R):DStream[R]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">reduce</span><span class="params">(<span name="reduceFunc">reduceFunc: (<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.R">R</span>, <span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.R">R</span>) ⇒ <span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.R">R</span></span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.streaming.dstream.DStream" class="extype" target="_top">DStream</a>[<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.R">R</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DStream</dd></dl></div>
+    </li><li name="org.apache.spark.streaming.dstream.DStream#reduceByWindow" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="reduceByWindow(reduceFunc:&lt;?&gt;,invReduceFunc:&lt;?&gt;,windowDuration:&lt;?&gt;,slideDuration:&lt;?&gt;):org.apache.spark.streaming.dstream.DStream[T]"></a>
+      <a id="reduceByWindow((R,R)⇒R,(R,R)⇒R,Duration,Duration):DStream[R]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">reduceByWindow</span><span class="params">(<span name="reduceFunc">reduceFunc: (<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.R">R</span>, <span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.R">R</span>) ⇒ <span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.R">R</span></span>, <span name="invReduceFunc">invReduceFunc: (<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.R">R</span>, <span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.R">R</span>) ⇒ <span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.R">R</span></span>, <span name="windowDuration">windowDuration: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.streaming.Duration" class="extype" target="_top">Duration</a></span>, <span name="slideDuration">slideDuration: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.streaming.Duration" class="extype" target="_top">Duration</a></span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.streaming.dstream.DStream" class="extype" target="_top">DStream</a>[<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.R">R</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DStream</dd></dl></div>
+    </li><li name="org.apache.spark.streaming.dstream.DStream#reduceByWindow" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="reduceByWindow(reduceFunc:&lt;?&gt;,windowDuration:&lt;?&gt;,slideDuration:&lt;?&gt;):org.apache.spark.streaming.dstream.DStream[T]"></a>
+      <a id="reduceByWindow((R,R)⇒R,Duration,Duration):DStream[R]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">reduceByWindow</span><span class="params">(<span name="reduceFunc">reduceFunc: (<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.R">R</span>, <span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.R">R</span>) ⇒ <span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.R">R</span></span>, <span name="windowDuration">windowDuration: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.streaming.Duration" class="extype" target="_top">Duration</a></span>, <span name="slideDuration">slideDuration: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.streaming.Duration" class="extype" target="_top">Duration</a></span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.streaming.dstream.DStream" class="extype" target="_top">DStream</a>[<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.R">R</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DStream</dd></dl></div>
+    </li><li name="org.apache.spark.streaming.dstream.DStream#repartition" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="repartition(numPartitions:&lt;?&gt;):org.apache.spark.streaming.dstream.DStream[T]"></a>
+      <a id="repartition(Int):DStream[R]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">repartition</span><span class="params">(<span name="numPartitions">numPartitions: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a></span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.streaming.dstream.DStream" class="extype" target="_top">DStream</a>[<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.R">R</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DStream</dd></dl></div>
+    </li><li name="org.apache.spark.streaming.dstream.DStream#saveAsObjectFiles" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="saveAsObjectFiles(prefix:&lt;?&gt;,suffix:&lt;?&gt;):Unit"></a>
+      <a id="saveAsObjectFiles(String,String):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">saveAsObjectFiles</span><span class="params">(<span name="prefix">prefix: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="suffix">suffix: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DStream</dd></dl></div>
+    </li><li name="org.apache.spark.streaming.dstream.DStream#saveAsTextFiles" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="saveAsTextFiles(prefix:&lt;?&gt;,suffix:&lt;?&gt;):Unit"></a>
+      <a id="saveAsTextFiles(String,String):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">saveAsTextFiles</span><span class="params">(<span name="prefix">prefix: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="suffix">suffix: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DStream</dd></dl></div>
+    </li><li name="org.apache.spark.streaming.dstream.DStream#slice" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="slice(fromTime:&lt;?&gt;,toTime:&lt;?&gt;):Seq[org.apache.spark.rdd.RDD[T]]"></a>
+      <a id="slice(Time,Time):Seq[RDD[R]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">slice</span><span class="params">(<span name="fromTime">fromTime: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.streaming.Time" class="extype" target="_top">Time</a></span>, <span name="toTime">toTime: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.streaming.Time" class="extype" target="_top">Time</a></span>)</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.R">R</span>]]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DStream</dd></dl></div>
+    </li><li name="org.apache.spark.streaming.dstream.DStream#slice" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="slice(interval:&lt;?&gt;):Seq[org.apache.spark.rdd.RDD[T]]"></a>
+      <a id="slice(Interval):Seq[RDD[R]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">slice</span><span class="params">(<span name="interval">interval: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.streaming.Interval" class="extype" target="_top">Interval</a></span>)</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.R">R</span>]]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DStream</dd></dl></div>
+    </li><li name="org.apache.spark.streaming.dstream.InputDStream#slideDuration" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="slideDuration:org.apache.spark.streaming.Duration"></a>
+      <a id="slideDuration:Duration"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">slideDuration</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.streaming.Duration" class="extype" target="_top">Duration</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>InputDStream → DStream</dd></dl></div>
+    </li><li name="org.apache.spark.streaming.kafka.DirectKafkaInputDStream#start" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="start():Unit"></a>
+      <a id="start():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">start</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DirectKafkaInputDStream → InputDStream</dd></dl></div>
+    </li><li name="org.apache.spark.streaming.kafka.DirectKafkaInputDStream#stop" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="stop():Unit"></a>
+      <a id="stop():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">stop</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DirectKafkaInputDStream → InputDStream</dd></dl></div>
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
+      <a id="synchronized[T0](⇒T0):T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <a id="toString():String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="org.apache.spark.streaming.dstream.DStream#transform" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="transform[U&lt;:&lt;?&gt;](transformFunc:&lt;?&gt;)(implicitevidence$6:&lt;?&gt;):org.apache.spark.streaming.dstream.DStream[U]"></a>
+      <a id="transform[U]((RDD[R],Time)⇒RDD[U])(ClassTag[U]):DStream[U]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">transform</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="transformFunc">transformFunc: (<a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.R">R</span>], <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.streaming.Time" class="extype" target="_top">Time</a>) ⇒ <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.streaming.dstream.DStream.transform.U">U</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.streaming.dstream.DStream.transform.U">U</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.streaming.dstream.DStream" class="extype" target="_top">DStream</a>[<span class="extype" name="org.apache.spark.streaming.dstream.DStream.transform.U">U</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DStream</dd></dl></div>
+    </li><li name="org.apache.spark.streaming.dstream.DStream#transform" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="transform[U&lt;:&lt;?&gt;](transformFunc:&lt;?&gt;)(implicitevidence$5:&lt;?&gt;):org.apache.spark.streaming.dstream.DStream[U]"></a>
+      <a id="transform[U]((RDD[R])⇒RDD[U])(ClassTag[U]):DStream[U]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">transform</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="transformFunc">transformFunc: (<a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.R">R</span>]) ⇒ <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.streaming.dstream.DStream.transform.U">U</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.streaming.dstream.DStream.transform.U">U</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.streaming.dstream.DStream" class="extype" target="_top">DStream</a>[<span class="extype" name="org.apache.spark.streaming.dstream.DStream.transform.U">U</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DStream</dd></dl></div>
+    </li><li name="org.apache.spark.streaming.dstream.DStream#transformWith" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="transformWith[U&lt;:&lt;?&gt;,V&lt;:&lt;?&gt;](other:&lt;?&gt;,transformFunc:&lt;?&gt;)(implicitevidence$9:&lt;?&gt;,implicitevidence$10:&lt;?&gt;):org.apache.spark.streaming.dstream.DStream[V]"></a>
+      <a id="transformWith[U,V](DStream[U],(RDD[R],RDD[U],Time)⇒RDD[V])(ClassTag[U],ClassTag[V]):DStream[V]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">transformWith</span><span class="tparams">[<span name="U">U</span>, <span name="V">V</span>]</span><span class="params">(<span name="other">other: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.streaming.dstream.DStream" class="extype" target="_top">DStream</a>[<span class="extype" name="org.apache.spark.streaming.dstream.DStream.transformWith.U">U</span>]</span>, <span name="transformFunc">transformFunc: (<a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.R">R</span>], <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.streaming.dstream.DStream.transformWith.U">U</span>], <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.streaming.Time" class="extype" target="_top">Time</a>) ⇒ <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.streaming.dstream.DStream.transformWith.V">V</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.streaming.dstream.DStream.transformWith.U">U</span>]</span>, <span name="arg1">arg1: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.streaming.dstream.DStream.transformWith.V">V</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.streaming.dstream.DStream" class="extype" target="_top">DStream</a>[<span class="extype" name="org.apache.spark.streaming.dstream.DStream.transformWith.V">V</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DStream</dd></dl></div>
+    </li><li name="org.apache.spark.streaming.dstream.DStream#transformWith" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="transformWith[U&lt;:&lt;?&gt;,V&lt;:&lt;?&gt;](other:&lt;?&gt;,transformFunc:&lt;?&gt;)(implicitevidence$7:&lt;?&gt;,implicitevidence$8:&lt;?&gt;):org.apache.spark.streaming.dstream.DStream[V]"></a>
+      <a id="transformWith[U,V](DStream[U],(RDD[R],RDD[U])⇒RDD[V])(ClassTag[U],ClassTag[V]):DStream[V]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">transformWith</span><span class="tparams">[<span name="U">U</span>, <span name="V">V</span>]</span><span class="params">(<span name="other">other: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.streaming.dstream.DStream" class="extype" target="_top">DStream</a>[<span class="extype" name="org.apache.spark.streaming.dstream.DStream.transformWith.U">U</span>]</span>, <span name="transformFunc">transformFunc: (<a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.R">R</span>], <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.streaming.dstream.DStream.transformWith.U">U</span>]) ⇒ <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.streaming.dstream.DStream.transformWith.V">V</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.streaming.dstream.DStream.transformWith.U">U</span>]</span>, <span name="arg1">arg1: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.streaming.dstream.DStream.transformWith.V">V</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.streaming.dstream.DStream" class="extype" target="_top">DStream</a>[<span class="extype" name="org.apache.spark.streaming.dstream.DStream.transformWith.V">V</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DStream</dd></dl></div>
+    </li><li name="org.apache.spark.streaming.dstream.DStream#union" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="union(that:&lt;?&gt;):org.apache.spark.streaming.dstream.DStream[T]"></a>
+      <a id="union(DStream[R]):DStream[R]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">union</span><span class="params">(<span name="that">that: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.streaming.dstream.DStream" class="extype" target="_top">DStream</a>[<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.R">R</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.streaming.dstream.DStream" class="extype" target="_top">DStream</a>[<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.R">R</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DStream</dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <a id="wait():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a>
+      <a id="wait(Long,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Long" class="extype" target="_top">Long</a></span>, <span name="arg1">arg1: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a>
+      <a id="wait(Long):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Long" class="extype" target="_top">Long</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.spark.streaming.dstream.DStream#window" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="window(windowDuration:&lt;?&gt;,slideDuration:&lt;?&gt;):org.apache.spark.streaming.dstream.DStream[T]"></a>
+      <a id="window(Duration,Duration):DStream[R]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">window</span><span class="params">(<span name="windowDuration">windowDuration: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.streaming.Duration" class="extype" target="_top">Duration</a></span>, <span name="slideDuration">slideDuration: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.streaming.Duration" class="extype" target="_top">Duration</a></span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.streaming.dstream.DStream" class="extype" target="_top">DStream</a>[<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.R">R</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DStream</dd></dl></div>
+    </li><li name="org.apache.spark.streaming.dstream.DStream#window" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="window(windowDuration:&lt;?&gt;):org.apache.spark.streaming.dstream.DStream[T]"></a>
+      <a id="window(Duration):DStream[R]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">window</span><span class="params">(<span name="windowDuration">windowDuration: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.streaming.Duration" class="extype" target="_top">Duration</a></span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.streaming.dstream.DStream" class="extype" target="_top">DStream</a>[<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.R">R</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DStream</dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Deprecated Value Members</h3>
+              <ol><li name="org.apache.spark.streaming.dstream.DStream#foreach" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="foreach(foreachFunc:&lt;?&gt;):Unit"></a>
+      <a id="foreach((RDD[R],Time)⇒Unit):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version 0.9.0) use foreachRDD">foreach</span><span class="params">(<span name="foreachFunc">foreachFunc: (<a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.R">R</span>], <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.streaming.Time" class="extype" target="_top">Time</a>) ⇒ <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DStream</dd><dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 0.9.0)</i> use foreachRDD</p></dd></dl></div>
+    </li><li name="org.apache.spark.streaming.dstream.DStream#foreach" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="foreach(foreachFunc:&lt;?&gt;):Unit"></a>
+      <a id="foreach((RDD[R])⇒Unit):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version 0.9.0) use foreachRDD">foreach</span><span class="params">(<span name="foreachFunc">foreachFunc: (<a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.R">R</span>]) ⇒ <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DStream</dd><dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 0.9.0)</i> use foreachRDD</p></dd></dl></div>
+    </li></ol>
+            </div>
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="org.apache.spark.streaming.kafka.DirectKafkaInputDStream">
+              <h3>Inherited from <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/spark/spark-streaming-kafka_2.10/1.4.1/spark-streaming-kafka_2.10-1.4.1-javadoc.jar/!/index.html#org.apache.spark.streaming.kafka.DirectKafkaInputDStream" class="extype" target="_top">DirectKafkaInputDStream</a>[<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.K">K</span>, <span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.V">V</span>, <span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.U">U</span>, <span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.T">T</span>, <span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.R">R</span>]</h3>
+            </div><div class="parent" name="org.apache.spark.streaming.dstream.InputDStream">
+              <h3>Inherited from <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.streaming.dstream.InputDStream" class="extype" target="_top">InputDStream</a>[<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.R">R</span>]</h3>
+            </div><div class="parent" name="org.apache.spark.streaming.dstream.DStream">
+              <h3>Inherited from <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.streaming.dstream.DStream" class="extype" target="_top">DStream</a>[<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream.R">R</span>]</h3>
+            </div><div class="parent" name="org.apache.spark.Logging">
+              <h3>Inherited from <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.Logging" class="extype" target="_top">Logging</a></h3>
+            </div><div class="parent" name="scala.Serializable">
+              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></h3>
+            </div><div class="parent" name="java.io.Serializable">
+              <h3>Inherited from <span class="extype" name="java.io.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Any" class="extype" target="_top">Any</a></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+      <script defer="defer" type="text/javascript" id="jquery-js" src="../../../../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../../../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../../../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../../../../lib/template.js"></script>
+    </body>
+      </html>

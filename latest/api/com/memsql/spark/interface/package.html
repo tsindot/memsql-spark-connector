@@ -1,0 +1,264 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>interface - com.memsql.spark.interface</title>
+          <meta name="description" content="interface - com.memsql.spark.interface" />
+          <meta name="keywords" content="interface com.memsql.spark.interface" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../../index.html';
+            var hash = 'com.memsql.spark.interface.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img src="../../../../lib/package_big.png" />
+        <p id="owner"><a href="../../../package.html" class="extype" name="com">com</a>.<a href="../../package.html" class="extype" name="com.memsql">memsql</a>.<a href="../package.html" class="extype" name="com.memsql.spark">spark</a></p>
+        <h1>interface</h1>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">interface</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        
+        
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="com.memsql.spark.interface.Application" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ApplicationextendsLogging"></a>
+      <a id="Application:Application"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Application.html"><span class="name">Application</span></a><span class="result"> extends <a href="../etl/utils/Logging.html" class="extype" name="com.memsql.spark.etl.utils.Logging">Logging</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.memsql.spark.interface.Config" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ConfigextendsProductwithSerializable"></a>
+      <a id="Config:Config"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Config.html"><span class="name">Config</span></a><span class="params">(<span name="port">port: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a> = <span class="symbol">Config.DEFAULT_PORT</span></span>, <span name="dataDir">dataDir: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">Config.DEFAULT_DATA_DIR</span></span>, <span name="dbHost">dbHost: <span class="extype" name="scala.Predef.String">String</span> = <span class="defval" name="com.memsql.spark.context.MemSQLContext.DEFAULT_HOST">...</span></span>, <span name="dbPort">dbPort: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a> = <span class="defval" name="com.memsql.spark.context.MemSQLContext.DEFAULT_PORT">...</span></span>, <span name="dbUser">dbUser: <span class="extype" name="scala.Predef.String">String</span> = <span class="defval" name="com.memsql.spark.context.MemSQLContext.DEFAULT_USER">...</span></span>, <span name="dbPassword">dbPassword: <span class="extype" name="scala.Predef.String">String</span> = <span class="defval" name="com.memsql.spark.context.MemSQLContext.DEFAULT_PASSWORD">...</span></span>, <span name="debug">debug: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a> = <span class="symbol">Config.DEFAULT_DEBUG</span></span>)</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.memsql.spark.interface.DefaultPipelineMonitor" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DefaultPipelineMonitorextendsPipelineMonitorwithLogging"></a>
+      <a id="DefaultPipelineMonitor:DefaultPipelineMonitor"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="DefaultPipelineMonitor.html"><span class="name">DefaultPipelineMonitor</span></a><span class="result"> extends <a href="PipelineMonitor.html" class="extype" name="com.memsql.spark.interface.PipelineMonitor">PipelineMonitor</a> with <a href="../etl/utils/Logging.html" class="extype" name="com.memsql.spark.etl.utils.Logging">Logging</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.memsql.spark.interface.PhaseResult" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PhaseResultextendsProductwithSerializable"></a>
+      <a id="PhaseResult:PhaseResult"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="PhaseResult.html"><span class="name">PhaseResult</span></a><span class="params">(<span name="count">count: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Long" class="extype" target="_top">Long</a>] = <span class="symbol">scala.None</span></span>, <span name="columns">columns: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<span class="extype" name="scala.List">List</span>[(<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>)]] = <span class="symbol">scala.None</span></span>, <span name="records">records: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<span class="extype" name="scala.List">List</span>[<span class="extype" name="scala.List">List</span>[<span class="extype" name="scala.Predef.String">String</span>]]] = <span class="symbol">scala.None</span></span>)</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.memsql.spark.interface.PipelineMonitor" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="PipelineMonitorextendsAnyRef"></a>
+      <a id="PipelineMonitor:PipelineMonitor"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="PipelineMonitor.html"><span class="name">PipelineMonitor</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.memsql.spark.interface.PipelineMonitorException" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PipelineMonitorExceptionextendsBaseException"></a>
+      <a id="PipelineMonitorException:PipelineMonitorException"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="PipelineMonitorException.html"><span class="name">PipelineMonitorException</span></a><span class="result"> extends <a href="util/BaseException.html" class="extype" name="com.memsql.spark.interface.util.BaseException">BaseException</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.memsql.spark.interface.SparkInterface" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SparkInterfaceextendsApplication"></a>
+      <a id="SparkInterface:SparkInterface"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="SparkInterface.html"><span class="name">SparkInterface</span></a><span class="result"> extends <a href="Application.html" class="extype" name="com.memsql.spark.interface.Application">Application</a></span>
+      </span>
+      </h4>
+      
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="com.memsql.spark.interface.Config" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Config"></a>
+      <a id="Config:Config"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Config$.html"><span class="name">Config</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.memsql.spark.interface.Main" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Main"></a>
+      <a id="Main:Main"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Main$.html"><span class="name">Main</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="com.memsql.spark.interface.api" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="api"></a>
+      <a id="api:api"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="api/package.html"><span class="name">api</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="com.memsql.spark.interface.meta" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="meta"></a>
+      <a id="meta:meta"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="meta/package.html"><span class="name">meta</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="com.memsql.spark.interface.server" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="server"></a>
+      <a id="server:server"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="server/package.html"><span class="name">server</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="com.memsql.spark.interface.util" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="util"></a>
+      <a id="util:util"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="util/package.html"><span class="name">util</span></a>
+      </span>
+      </h4>
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+      <script defer="defer" type="text/javascript" id="jquery-js" src="../../../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../../../lib/template.js"></script>
+    </body>
+      </html>

@@ -1,0 +1,303 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>utils - com.memsql.spark.etl.utils</title>
+          <meta name="description" content="utils - com.memsql.spark.etl.utils" />
+          <meta name="keywords" content="utils com.memsql.spark.etl.utils" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../../../index.html';
+            var hash = 'com.memsql.spark.etl.utils.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img src="../../../../../lib/package_big.png" />
+        <p id="owner"><a href="../../../../package.html" class="extype" name="com">com</a>.<a href="../../../package.html" class="extype" name="com.memsql">memsql</a>.<a href="../../package.html" class="extype" name="com.memsql.spark">spark</a>.<a href="../package.html" class="extype" name="com.memsql.spark.etl">etl</a></p>
+        <h1>utils</h1>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">utils</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        
+        
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="com.memsql.spark.etl.utils.ByteUtilsException" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ByteUtilsExceptionextendsException"></a>
+      <a id="ByteUtilsException:ByteUtilsException"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="ByteUtilsException.html"><span class="name">ByteUtilsException</span></a><span class="result"> extends <span class="extype" name="scala.Exception">Exception</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.memsql.spark.etl.utils.ColumnDefinition" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ColumnDefinitionextendsProductwithSerializable"></a>
+      <a id="ColumnDefinition:ColumnDefinition"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="ColumnDefinition.html"><span class="name">ColumnDefinition</span></a><span class="params">(<span name="name">name: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">scala.None</span></span>, <span name="column_type">column_type: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/spark/spark-catalyst_2.10/1.4.1/spark-catalyst_2.10-1.4.1-javadoc.jar/!/index.html#org.apache.spark.sql.types.DataType" class="extype" target="_top">DataType</a>] = <span class="symbol">scala.None</span></span>, <span name="skip">skip: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a>] = <span class="symbol">scala.None</span></span>)</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.memsql.spark.etl.utils.DataFrameBuilder" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DataFrameBuilderextendsSerializablewithProduct"></a>
+      <a id="DataFrameBuilder:DataFrameBuilder"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="DataFrameBuilder.html"><span class="name">DataFrameBuilder</span></a><span class="params">(<span name="schema">schema: <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/spark/spark-catalyst_2.10/1.4.1/spark-catalyst_2.10-1.4.1-javadoc.jar/!/index.html#org.apache.spark.sql.types.StructType" class="extype" target="_top">StructType</a></span>)</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Product" class="extype" target="_top">Product</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Utility for creating DataFrames in a mistake-resistant way from the executors.</p>
+    </li><li name="com.memsql.spark.etl.utils.JSONExtractLeaf" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="JSONExtractLeafextendsJSONPathwithProductwithSerializable"></a>
+      <a id="JSONExtractLeaf:JSONExtractLeaf"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="JSONExtractLeaf.html"><span class="name">JSONExtractLeaf</span></a><span class="params">(<span name="leafName">leafName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="leafType">leafType: <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/spark/spark-catalyst_2.10/1.4.1/spark-catalyst_2.10-1.4.1-javadoc.jar/!/index.html#org.apache.spark.sql.types.DataType" class="extype" target="_top">DataType</a></span>)</span><span class="result"> extends <a href="JSONPath.html" class="extype" name="com.memsql.spark.etl.utils.JSONPath">JSONPath</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.memsql.spark.etl.utils.JSONExtractObject" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="JSONExtractObjectextendsJSONPathwithProductwithSerializable"></a>
+      <a id="JSONExtractObject:JSONExtractObject"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="JSONExtractObject.html"><span class="name">JSONExtractObject</span></a><span class="params">(<span name="objName">objName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="pathTail">pathTail: <a href="JSONPath.html" class="extype" name="com.memsql.spark.etl.utils.JSONPath">JSONPath</a></span>)</span><span class="result"> extends <a href="JSONPath.html" class="extype" name="com.memsql.spark.etl.utils.JSONPath">JSONPath</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.memsql.spark.etl.utils.JSONPath" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="JSONPathextendsAnyRef"></a>
+      <a id="JSONPath:JSONPath"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="JSONPath.html"><span class="name">JSONPath</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.memsql.spark.etl.utils.JsonEnumProtocol" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="JsonEnumProtocolextendsDefaultJsonProtocol"></a>
+      <a id="JsonEnumProtocol:JsonEnumProtocol"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="JsonEnumProtocol.html"><span class="name">JsonEnumProtocol</span></a><span class="result"> extends <span class="extype" name="spray.json.DefaultJsonProtocol">DefaultJsonProtocol</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.memsql.spark.etl.utils.Logging" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="LoggingextendsAnyRef"></a>
+      <a id="Logging:Logging"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Logging.html"><span class="name">Logging</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.memsql.spark.etl.utils.PhaseLogger" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="PhaseLoggerextendsAnyRef"></a>
+      <a id="PhaseLogger:PhaseLogger"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="PhaseLogger.html"><span class="name">PhaseLogger</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Logger interface for user defined Extractors, Transformers, and Loaders.</p>
+    </li><li name="com.memsql.spark.etl.utils.RowBuilder" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RowBuilderextendsProductwithSerializable"></a>
+      <a id="RowBuilder:RowBuilder"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="RowBuilder.html"><span class="name">RowBuilder</span></a><span class="params">(<span name="colNames">colNames: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Array" class="extype" target="_top">Array</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4>
+      
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="com.memsql.spark.etl.utils.ByteUtils" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ByteUtils"></a>
+      <a id="ByteUtils:ByteUtils"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ByteUtils$.html"><span class="name">ByteUtils</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Convenience class for serializing and deserializing byte arrays.</p>
+    </li><li name="com.memsql.spark.etl.utils.JSONPath" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="JSONPath"></a>
+      <a id="JSONPath:JSONPath"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="JSONPath$.html"><span class="name">JSONPath</span></a>
+      </span>
+      </h4>
+      <p class="comment cmt">Utility for extracting values from a JSON blob.</p>
+    </li><li name="com.memsql.spark.etl.utils.JSONUtils" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="JSONUtils"></a>
+      <a id="JSONUtils:JSONUtils"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="JSONUtils$.html"><span class="name">JSONUtils</span></a>
+      </span>
+      </h4>
+      <p class="comment cmt">Utility for parsing a JSON formatted <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">org.apache.spark.rdd.RDD</a>.</p>
+    </li><li name="com.memsql.spark.etl.utils.Logging" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Logging"></a>
+      <a id="Logging:Logging"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Logging$.html"><span class="name">Logging</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="com.memsql.spark.etl.utils.SimpleJsonSchema" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SimpleJsonSchema"></a>
+      <a id="SimpleJsonSchema:SimpleJsonSchema"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="SimpleJsonSchema$.html"><span class="name">SimpleJsonSchema</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="com.memsql.spark.etl.utils.SimpleJsonSchemaProtocol" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SimpleJsonSchemaProtocol"></a>
+      <a id="SimpleJsonSchemaProtocol:SimpleJsonSchemaProtocol"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="SimpleJsonSchemaProtocol$.html"><span class="name">SimpleJsonSchemaProtocol</span></a><span class="result"> extends <a href="JsonEnumProtocol.html" class="extype" name="com.memsql.spark.etl.utils.JsonEnumProtocol">JsonEnumProtocol</a></span>
+      </span>
+      </h4>
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+      <script defer="defer" type="text/javascript" id="jquery-js" src="../../../../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../../../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../../../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../../../../lib/template.js"></script>
+    </body>
+      </html>

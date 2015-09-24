@@ -1,0 +1,303 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>configs - com.memsql.spark.etl.api.configs</title>
+          <meta name="description" content="configs - com.memsql.spark.etl.api.configs" />
+          <meta name="keywords" content="configs com.memsql.spark.etl.api.configs" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../../../../index.html';
+            var hash = 'com.memsql.spark.etl.api.configs.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img src="../../../../../../lib/package_big.png" />
+        <p id="owner"><a href="../../../../../package.html" class="extype" name="com">com</a>.<a href="../../../../package.html" class="extype" name="com.memsql">memsql</a>.<a href="../../../package.html" class="extype" name="com.memsql.spark">spark</a>.<a href="../../package.html" class="extype" name="com.memsql.spark.etl">etl</a>.<a href="../package.html" class="extype" name="com.memsql.spark.etl.api">api</a></p>
+        <h1>configs</h1>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">configs</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        
+        
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="com.memsql.spark.etl.api.configs.LoadConfigOptions" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LoadConfigOptionsextendsProductwithSerializable"></a>
+      <a id="LoadConfigOptions:LoadConfigOptions"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="LoadConfigOptions.html"><span class="name">LoadConfigOptions</span></a><span class="params">(<span name="on_duplicate_key_sql">on_duplicate_key_sql: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">scala.None</span></span>, <span name="upsert_batch_size">upsert_batch_size: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a>] = <span class="symbol">scala.None</span></span>, <span name="table_keys">table_keys: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<span class="extype" name="scala.List">List</span>[<a href="MemSQLKeyConfig.html" class="extype" name="com.memsql.spark.etl.api.configs.MemSQLKeyConfig">MemSQLKeyConfig</a>]] = <span class="symbol">scala.None</span></span>, <span name="table_extra_columns">table_extra_columns: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<span class="extype" name="scala.List">List</span>[<a href="MemSQLExtraColumnConfig.html" class="extype" name="com.memsql.spark.etl.api.configs.MemSQLExtraColumnConfig">MemSQLExtraColumnConfig</a>]] = <span class="symbol">scala.None</span></span>, <span name="use_keyless_sharding_optimization">use_keyless_sharding_optimization: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a>] = <span class="symbol">scala.None</span></span>, <span name="duplicate_key_behavior">duplicate_key_behavior: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<a href="MemSQLDupKeyBehavior$.html#MemSQLDupKeyBehavior=com.memsql.spark.etl.api.configs.MemSQLDupKeyBehavior.Value" class="extmbr" name="com.memsql.spark.etl.api.configs.MemSQLDupKeyBehavior.MemSQLDupKeyBehavior">MemSQLDupKeyBehavior.MemSQLDupKeyBehavior</a>] = <span class="symbol">scala.None</span></span>)</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.memsql.spark.etl.api.configs.MemSQLExtraColumnConfig" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MemSQLExtraColumnConfigextendsProductwithSerializable"></a>
+      <a id="MemSQLExtraColumnConfig:MemSQLExtraColumnConfig"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="MemSQLExtraColumnConfig.html"><span class="name">MemSQLExtraColumnConfig</span></a><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="col_type">col_type: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="nullable">nullable: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a>]</span>, <span name="default_sql">default_sql: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="persisted">persisted: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.memsql.spark.etl.api.configs.MemSQLKeyConfig" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MemSQLKeyConfigextendsProductwithSerializable"></a>
+      <a id="MemSQLKeyConfig:MemSQLKeyConfig"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="MemSQLKeyConfig.html"><span class="name">MemSQLKeyConfig</span></a><span class="params">(<span name="key_type">key_type: <a href="MemSQLKeyType$.html#MemSQLKeyType=com.memsql.spark.etl.api.configs.MemSQLKeyType.Value" class="extmbr" name="com.memsql.spark.etl.api.configs.MemSQLKeyType.MemSQLKeyType">MemSQLKeyType.MemSQLKeyType</a></span>, <span name="column_names">column_names: <span class="extype" name="scala.List">List</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.memsql.spark.etl.api.configs.MemSQLLoadConfig" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MemSQLLoadConfigextendsPhaseConfigwithProductwithSerializable"></a>
+      <a id="MemSQLLoadConfig:MemSQLLoadConfig"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="MemSQLLoadConfig.html"><span class="name">MemSQLLoadConfig</span></a><span class="params">(<span name="db_name">db_name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="table_name">table_name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="table_config">table_config: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<a href="MemSQLTableConfig$.html#MemSQLTableConfig=com.memsql.spark.etl.api.configs.MemSQLTableConfig.Value" class="extmbr" name="com.memsql.spark.etl.api.configs.MemSQLTableConfig.MemSQLTableConfig">MemSQLTableConfig.MemSQLTableConfig</a>]</span>, <span name="options">options: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<a href="LoadConfigOptions.html" class="extype" name="com.memsql.spark.etl.api.configs.LoadConfigOptions">LoadConfigOptions</a>]</span>, <span name="dry_run">dry_run: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a> = <span class="symbol">false</span></span>)</span><span class="result"> extends <a href="../PhaseConfig.html" class="extype" name="com.memsql.spark.etl.api.PhaseConfig">PhaseConfig</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.memsql.spark.etl.api.configs.Phase" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Phase[T]extendsProductwithSerializable"></a>
+      <a id="Phase[T]:Phase[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Phase.html"><span class="name">Phase</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="kind">kind: <span class="extype" name="com.memsql.spark.etl.api.configs.Phase.T">T</span></span>, <span name="config">config: <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/io/spray/spray-json_2.10/1.3.2/spray-json_2.10-1.3.2-javadoc.jar/!/index.html#spray.json.JsValue" class="extype" target="_top">JsValue</a></span>)</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.memsql.spark.etl.api.configs.PipelineConfig" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PipelineConfigextendsProductwithSerializable"></a>
+      <a id="PipelineConfig:PipelineConfig"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="PipelineConfig.html"><span class="name">PipelineConfig</span></a><span class="params">(<span name="extract">extract: <a href="Phase.html" class="extype" name="com.memsql.spark.etl.api.configs.Phase">Phase</a>[<a href="ExtractPhaseKind$.html#ExtractPhaseKind=com.memsql.spark.etl.api.configs.ExtractPhaseKind.Value" class="extmbr" name="com.memsql.spark.etl.api.configs.ExtractPhaseKind.ExtractPhaseKind">ExtractPhaseKind.ExtractPhaseKind</a>]</span>, <span name="transform">transform: <a href="Phase.html" class="extype" name="com.memsql.spark.etl.api.configs.Phase">Phase</a>[<a href="TransformPhaseKind$.html#TransformPhaseKind=com.memsql.spark.etl.api.configs.TransformPhaseKind.Value" class="extmbr" name="com.memsql.spark.etl.api.configs.TransformPhaseKind.TransformPhaseKind">TransformPhaseKind.TransformPhaseKind</a>]</span>, <span name="load">load: <a href="Phase.html" class="extype" name="com.memsql.spark.etl.api.configs.Phase">Phase</a>[<a href="LoadPhaseKind$.html#LoadPhaseKind=com.memsql.spark.etl.api.configs.LoadPhaseKind.Value" class="extmbr" name="com.memsql.spark.etl.api.configs.LoadPhaseKind.LoadPhaseKind">LoadPhaseKind.LoadPhaseKind</a>]</span>, <span name="config_version">config_version: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a> = <span class="defval" name="PipelineConfigVersion.CurrentPipelineConfigVersion">...</span></span>)</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4>
+      
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="com.memsql.spark.etl.api.configs.ExtractPhaseKind" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ExtractPhaseKind"></a>
+      <a id="ExtractPhaseKind:ExtractPhaseKind"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ExtractPhaseKind$.html"><span class="name">ExtractPhaseKind</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Enumeration" class="extype" target="_top">Enumeration</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.memsql.spark.etl.api.configs.LoadPhase" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LoadPhase"></a>
+      <a id="LoadPhase:LoadPhase"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="LoadPhase$.html"><span class="name">LoadPhase</span></a><span class="result"> extends <span class="extype" name="spray.json.DefaultJsonProtocol">DefaultJsonProtocol</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.memsql.spark.etl.api.configs.LoadPhaseImplicits" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LoadPhaseImplicits"></a>
+      <a id="LoadPhaseImplicits:LoadPhaseImplicits"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="LoadPhaseImplicits$.html"><span class="name">LoadPhaseImplicits</span></a><span class="result"> extends <a href="../../utils/JsonEnumProtocol.html" class="extype" name="com.memsql.spark.etl.utils.JsonEnumProtocol">JsonEnumProtocol</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.memsql.spark.etl.api.configs.LoadPhaseKind" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LoadPhaseKind"></a>
+      <a id="LoadPhaseKind:LoadPhaseKind"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="LoadPhaseKind$.html"><span class="name">LoadPhaseKind</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Enumeration" class="extype" target="_top">Enumeration</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.memsql.spark.etl.api.configs.MemSQLDupKeyBehavior" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MemSQLDupKeyBehavior"></a>
+      <a id="MemSQLDupKeyBehavior:MemSQLDupKeyBehavior"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="MemSQLDupKeyBehavior$.html"><span class="name">MemSQLDupKeyBehavior</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Enumeration" class="extype" target="_top">Enumeration</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.memsql.spark.etl.api.configs.MemSQLKeyType" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MemSQLKeyType"></a>
+      <a id="MemSQLKeyType:MemSQLKeyType"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="MemSQLKeyType$.html"><span class="name">MemSQLKeyType</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Enumeration" class="extype" target="_top">Enumeration</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.memsql.spark.etl.api.configs.MemSQLTableConfig" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MemSQLTableConfig"></a>
+      <a id="MemSQLTableConfig:MemSQLTableConfig"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="MemSQLTableConfig$.html"><span class="name">MemSQLTableConfig</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Enumeration" class="extype" target="_top">Enumeration</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.memsql.spark.etl.api.configs.PipelineConfigVersion" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PipelineConfigVersion"></a>
+      <a id="PipelineConfigVersion:PipelineConfigVersion"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="PipelineConfigVersion$.html"><span class="name">PipelineConfigVersion</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="com.memsql.spark.etl.api.configs.TransformPhase" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TransformPhase"></a>
+      <a id="TransformPhase:TransformPhase"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="TransformPhase$.html"><span class="name">TransformPhase</span></a><span class="result"> extends <span class="extype" name="spray.json.DefaultJsonProtocol">DefaultJsonProtocol</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.memsql.spark.etl.api.configs.TransformPhaseKind" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TransformPhaseKind"></a>
+      <a id="TransformPhaseKind:TransformPhaseKind"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="TransformPhaseKind$.html"><span class="name">TransformPhaseKind</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Enumeration" class="extype" target="_top">Enumeration</a></span>
+      </span>
+      </h4>
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+      <script defer="defer" type="text/javascript" id="jquery-js" src="../../../../../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../../../../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../../../../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../../../../../lib/template.js"></script>
+    </body>
+      </html>
