@@ -1,10 +1,11 @@
 package com.memsql.spark.connector
 
+import com.memsql.spark.connector.util.MemSQLDriverManager
 import com.memsql.spark.context.MemSQLContext
 
 import scala.util.Random
 
-import java.sql.{Connection, DriverManager, PreparedStatement, Types, Statement}
+import java.sql.{Connection, PreparedStatement, Types, Statement}
 
 import org.apache.spark.TaskContext
 import org.apache.spark.rdd.RDD
@@ -92,7 +93,7 @@ class RDDFunctions(rdd: RDD[Row]) extends Serializable with Logging {
       try {
         val randomIndex = Random.nextInt(availableNodes.size)
         val dbAddress = "jdbc:mysql://" + availableNodes(randomIndex)._1 + ":" + availableNodes(randomIndex)._2
-        conn = DriverManager.getConnection(dbAddress, user, password)
+        conn = MemSQLDriverManager.getConnection(dbAddress, user, password)
         stmt = conn.createStatement
 
         // NOTE: when a leaf is not online, its partitions will have Host, Port and Role set to NULL
@@ -401,6 +402,6 @@ class RDDFunctions(rdd: RDD[Row]) extends Serializable with Logging {
     // Make sure the JDBC driver is on the classpath.
     Class.forName("com.mysql.jdbc.Driver").newInstance()
     val dbAddress = "jdbc:mysql://" + dbHost + ":" + dbPort + "/" + dbName
-    DriverManager.getConnection(dbAddress, user, password)
+    MemSQLDriverManager.getConnection(dbAddress, user, password)
   }
 }

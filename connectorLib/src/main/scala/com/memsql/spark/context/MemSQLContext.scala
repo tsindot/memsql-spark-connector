@@ -1,5 +1,7 @@
 package com.memsql.spark.context
 
+import com.memsql.spark.connector.util.MemSQLDriverManager
+
 import scala.util.Random
 import java.sql._
 import org.apache.spark._
@@ -38,7 +40,7 @@ object MemSQLContext {
       } else {
         ""
       })
-    DriverManager.getConnection(dbAddress, userName, password)
+    MemSQLDriverManager.getConnection(dbAddress, userName, password)
   }
 
   def getMemSQLChildAggregators(masterHost: String, masterPort: Int, userName: String, password: String): List[MemSQLNode] = {

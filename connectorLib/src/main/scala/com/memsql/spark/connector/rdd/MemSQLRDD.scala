@@ -1,11 +1,11 @@
 package com.memsql.spark.connector.rdd
 
-import java.sql.{Connection, DriverManager, ResultSet, Statement, PreparedStatement, Types}
+import java.sql.{Connection, ResultSet, Statement, PreparedStatement, Types}
 import scala.reflect.ClassTag
 
 import org.apache.spark.{Logging, Partition, SparkContext, TaskContext}
 import org.apache.spark.rdd.RDD
-import com.memsql.spark.connector.util.NextIterator
+import com.memsql.spark.connector.util.{MemSQLDriverManager, NextIterator}
 
 private class MemSQLRDDPartition(override val index: Int, val host: String, val port: Int) extends Partition
 
@@ -213,7 +213,7 @@ object MemSQLRDD {
     // Prepare the MySQL JDBC driver.
     Class.forName("com.mysql.jdbc.Driver").newInstance()
     val dbAddress = "jdbc:mysql://" + host + ":" + port + "/" + dbName
-    DriverManager.getConnection(dbAddress, user, password)
+    MemSQLDriverManager.getConnection(dbAddress, user, password)
   }
 
   def resultSetToIterator(rs: ResultSet): Iterator[ResultSet] = new Iterator[ResultSet] {
